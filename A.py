@@ -16,3 +16,16 @@
 | 8 3 5 4 5 1 |       |
 +-------------+-------+
 '''
+input=open('input.txt', 'r')
+output=open('output.txt', 'w')
+N=int(input())
+A=input().split()
+for i in range (N):
+    A[i]=int(A[i])
+A.append(' ')
+for i in range(N):
+    for j in range(i+1, N):
+        if A[i]==A[j]:
+            print(A[i])
+            break
+    
