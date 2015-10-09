@@ -1,14 +1,8 @@
-input=open('input.txt', 'r')
-output=open('output.txt', 'w')
-N=int(input())
-A=list(map(int, input.readline().split()))
-for i in range (N):
-    A[i]=int(A[i])
-A.append(' ')
-for i in range(N):
-    for j in range(i+1, N):
-        if A[i]==A[j]:
-            output.write(str(A[i]))
-            break
-output.close()        
-    
+inp = open("input.txt","r")
+wr = open("output.txt","w")
+s = list(inp.readlines())
+ns = list(map("int",s[1].split(" ")))
+for i in range(int(s[0])):
+  if ns.count(ns[i]) == 2:
+    print(ns[i])
+    break
