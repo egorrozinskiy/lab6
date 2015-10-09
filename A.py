@@ -1,15 +1,15 @@
 inp = open("input.txt","r")
-wr = open("output.txt","w")
+x = open("output.txt","w")
 s = list(inp.readlines())
-ns = list(map(int,s[1].split(" ")))
+k = list(map(int,s[1].split(" ")))
 for i in range(int(s[0])):
-  if ns.count(ns[i]) == 2:
-    wr.write(str(ns[i]))
-    wr.close()
+  if k.count(k[i]) == 2:
+    x.write(str(k[i]))
+    x.close()
     inp.close()
     break
-  if ns.count(ns[int(s[0])-1-i]) == 2:
-    wr.write(str(ns[int(s[0])-1-i]))
-    wr.close()
+  if k.count(k[int(s[0])-1-i]) == 2:
+    x.write(str(k[int(s[0])-1-i]))
+    x.close()
     inp.close()
     break
