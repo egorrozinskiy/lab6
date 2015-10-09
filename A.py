@@ -19,13 +19,14 @@
 input=open('input.txt', 'r')
 output=open('output.txt', 'w')
 N=int(input())
-A=input().split()
+A=list(map(int, input.readline().split()))
 for i in range (N):
     A[i]=int(A[i])
 A.append(' ')
 for i in range(N):
     for j in range(i+1, N):
         if A[i]==A[j]:
-            print(A[i])
+            output.write(str(A[i]))
             break
+output.close()        
     
